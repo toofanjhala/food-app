@@ -6,7 +6,7 @@ export const Header = () => {
     return (
         <React.Fragment >
             <header className={classes.header}>
-                <h2>FOOD APP</h2>
+                <h2>Food Factory</h2>
                <Cartbutton></Cartbutton>
             </header>
             <div className={classes.mainimage}>
