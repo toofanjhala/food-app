@@ -1,10 +1,12 @@
 import React from 'react'
 import CartIcon from '../cart/Carticon'
 import classes from"./CartButton.module.css"
-export const Cartbutton = () => {
+export const Cartbutton = (props) => {
   return (
     <React.Fragment>
-      <button className={classes.button}>
+      <button 
+      onClick={props.onclick}
+      className={classes.button}>
         <span className={classes.icon}><CartIcon/></span>
         <span>your expense</span>
         <span className={classes.badge}>30</span>

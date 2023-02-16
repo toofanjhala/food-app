@@ -11,7 +11,7 @@ const Overlays=(props)=>{
 
 const Backdrop=(props)=>{
     return (
-    <div className={classes.backdrop}> 
+    <div className={classes.backdrop} onClick={props.oncancel}> 
 
     </div>
     )
@@ -22,7 +22,7 @@ const portaladdress=document.getElementById("overlay")
 export const Modal = (props) => {
   return (
     <React.Fragment>
-    {ReactDOM.createPortal(<Backdrop/>,portaladdress)}
+    {ReactDOM.createPortal(<Backdrop oncancel={props.oncancel}/>,portaladdress)}
     {ReactDOM.createPortal(<Overlays>{props.children}</Overlays>,portaladdress)}
 
     </React.Fragment>
