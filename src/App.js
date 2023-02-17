@@ -2,6 +2,7 @@ import React, {useState}from "react";
 import Meals from "./components/meals/Meal";
 import { Header } from "./components/layout/Header";
 import Cart from "./components/cart/Cart";
+import CardProvider from "./store/cardcontextprovider";
 
 
 function App() {
@@ -18,14 +19,14 @@ function App() {
   }
 
   return (
-    <React.Fragment>
+    <CardProvider>
     { cartstatus && <Cart oncancel={hidecard}/>}
     <Header onclick={showcard}/>
     <main>
       <Meals/>
     </main>
     
-    </React.Fragment>
+    </CardProvider>
   );
 }
 
